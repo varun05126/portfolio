@@ -1,859 +1,628 @@
-<!-- Edited by Varun on July 7 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varun's Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varun M - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Varun Malthumkar" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Varun Malthumkar">Varun Malthumkar</h1>
-
-          <p class="title">Web developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:malthumkarvarun@gmail.com" class="contact-link">malthumkarvarun@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+917207105126" class="contact-link">+91 7207105126</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">December 05, 2006</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Hyderabad, Telangana, india</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/malthumkar-varun-4a8735356/" class="social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>            
-          </li>
-
-          <li class="social-item">
-            <a href="https://x.com/varun_5126" class="social-link" target="_blank">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>            
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/varun__05126/" class="social-link" target="_blank">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm a Computer Science and Engineering(AI & ML) student at Vardhaman College of Engineering with a deep interest in web development, 
-            cloud computing, and real-world problem solving. I love building full-stack applications that are both functional 
-            and user-friendly, and have worked on projects like an e-waste management system and a student note-sharing 
-            platform called "Share Your Book." Passionate about learning by doing, I explore technologies like Python, 
-            React, Django, and AWS to bring meaningful ideas to life.
-          </p>          
-
-          <p>
-            My focus is on building websites and applications that are not only functional and user-friendly but also 
-            visually appealing. I aim to blend clean design with seamless performance, ensuring each project reflects 
-            the identity and purpose behind it. Whether it's a college-based platform like "Share Your Book" or a 
-            social-impact project like e-waste management, I strive to add a personal and creative touch that enhances 
-            usability and impact.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-        
-          <ul class="testimonials-list has-scrollbar">
-        
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-        
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Sai Ram" width="60" data-testimonials-avatar>
-                </figure>
-        
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sai Ram</h4>
-        
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Working with Varun has been an exceptional experience. His creativity, dedication, and problem-solving skills consistently brought the best out of our project work. Whether it's frontend finesse or backend logic, he handles everything like a pro. Truly the most dependable teammate I’ve had!
-                  </p>
-                </div>
-        
-              </div>
-            </li>
-        
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-        
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="S. Vinod Reddy" width="60" data-testimonials-avatar>
-                </figure>
-        
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>S. Vinod Reddy (Guide)</h4>
-        
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Varun has shown remarkable growth and technical maturity during the course of our project. His ability to analyze, design, and implement solutions is impressive for someone at this stage. A student who is not only hardworking but also visionary in his approach to technology and innovation.
-                  </p>
-                </div>
-        
-              </div>
-            </li>
-        
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-        
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Peer Reviewer" width="60" data-testimonials-avatar>
-                </figure>
-        
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Peer Reviewer</h4>
-        
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Varun is a passionate and focused developer. His attention to detail and ability to simplify complex ideas into practical applications makes him stand out. He's the kind of person who elevates team performance just by being part of it.
-                  </p>
-                </div>
-        
-              </div>
-            </li>
-        
-          </ul>
-        
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-        
-          <section class="testimonials-modal">
-        
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-        
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-varun.png" alt="Sai Ram" width="80" data-modal-img>
-              </figure>
-        
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-        
-            <div class="modal-content">
-        
-              <h4 class="h3 modal-title" data-modal-title>Sai Ram</h4>
-        
-              <time datetime="2025-07-07">7 July, 2025</time>
-        
-              <div data-modal-text>
-                <p>
-                  Collaborating with Varun on our portfolio website project was a seamless experience. His eye for design,
-                  attention to detail, and clear vision brought our ideas to life. He’s calm, focused, and always one step
-                  ahead. Truly the backbone of our UI/UX and frontend work.
-                </p>
-              </div>
-        
-            </div>
-        
-          </section>
-        
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-  <h3 class="h3 clients-title">Aspirations & Associations</h3>
-
-  <ul class="clients-list has-scrollbar">
-
-    <li class="clients-item">
-      <a href="https://www.apple.com/in/" target="_blank">
-        <img src="./assets/images/logo-apple.png" alt="Apple Logo">
-      </a>
-    </li>
-
-    <li class="clients-item">
-      <a href="https://www.adobe.com/in/" target="_blank">
-        <img src="./assets/images/logo-adobe.png" alt="Adobe Logo">
-      </a>
-    </li>
-
-    <li class="clients-item">
-      <a href="https://www.linkedin.com/in/malthumkar-varun-4a8735356/" target="_blank">
-        <img src="./assets/images/logo-linkedin.png" alt="LinkedIn Profile">
-      </a>
-    </li>
-
-    <li class="clients-item">
-      <a href="https://vardhaman.org/" target="_blank">
-        <img src="./assets/images/logo-vardhaman.png" alt="Vardhaman College of Engineering">
-      </a>
-    </li>
-
-    <li class="clients-item">
-      <a href="https://www.github.com/varun05126" target="_blank">
-        <img src="./assets/images/logo-github.png" alt="GitHub">
-      </a>
-    </li>
-
-    <li class="clients-item">
-      <a href="https://chat.openai.com" target="_blank">
-        <img src="./assets/images/logo-openai.png" alt="OpenAI">
-      </a>
-    </li>
-
-  </ul>
-</section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-      
-        <!-- Education -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Education</h3>
-          </div>
-      
-          <ol class="timeline-list">
-      
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Vardhaman College of Engineering, Hyderabad</h4>
-              <span>2024 — Present</span>
-              <p class="timeline-text">
-                B.Tech in Computer Science and Engineering(AI & ML). Focused on full-stack development, data science, and cloud deployment using AWS. 
-              </p>
-            </li>
-      
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Intermediate — Narayana Junior College</h4>
-              <span>2022 — 2024</span>
-              <p class="timeline-text">
-                Completed MPC stream with strong foundations in Mathematics and Physics. Participated in various coding and tech quizzes.
-              </p>
-            </li>
-      
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">High School — Akshara High School</h4>
-              <span>May 2022</span>
-              <p class="timeline-text">
-                Academic excellence in Science and English. Initiated interest in software development through self-learning and experimentation.
-              </p>
-            </li>
-      
-          </ol>
-        </section>
-      
-        <!-- Experience / Projects -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Projects</h3>
-          </div>
-      
-          <ol class="timeline-list">
-      
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">E-Waste Collection and Recycling Platform</h4>
-              <span>2024 — Present</span>
-              <p class="timeline-text">
-                Developed a full-stack web app using React and Django for sensor-based e-waste bins, awareness content, and a reward system. Teammate: Sai Ram.
-              </p>
-            </li>
-      
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Share Your Book — Notes Sharing Platform</h4>
-              <span>2024</span>
-              <p class="timeline-text">
-                Designed and built a web app for sharing notes among college students. Features include category-wise uploads, authentication, and chatbot assistance.
-              </p>
-            </li>
-      
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Product Analyser — Smart E-Waste App</h4>
-              <span>2023</span>
-              <p class="timeline-text">
-                Created a system that analyzes old electronic items to determine their recyclability. Integrated data visualization and user recommendations.
-              </p>
-            </li>
-      
-          </ol>
-        </section>
-      
-        <!-- Skills -->
-        <section class="skill">
-          <h3 class="h3 skills-title">My Skills</h3>
-      
-          <ul class="skills-list content-card">
-      
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">HTML / CSS / JavaScript</h5>
-                <data value="85">85%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-      
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Python (Beginner to Intermediate)</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-      
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">React & Django</h5>
-                <data value="75">75%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-            </li>
-      
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">AWS & Deployment</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-      
-          </ul>
-        </section>
-      
-      </article>      
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-      
-        <section class="projects">
-      
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-          </ul>
-      
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-            </button>
-      
-            <ul class="select-list">
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Varun M</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-          </div>
-      
-          <ul class="project-list">
-      
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-                <h3 class="project-title">Finance</h3>
-                <p class="project-category">Web development</p>
-              </a>
-            </li>
-      
-            <!-- More project items will go here -->
-      
-          </ul>
-      
-        </section>
-      
-      </article>
+            <a href="#contact" class="btn btn-primary">Resume</a>
+        </div>
+    </nav>
 
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-      
-        <section class="blog-posts">
-      
-          <ul class="blog-posts-list">
-      
-            <li class="blog-post-item">
-              <a href="https://varun05126.github.io/e-waste" target="_blank">
-      
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/e-waste-thumbnail.jpg" alt="E-Waste Awareness" loading="lazy">
-                </figure>
-      
-                <div class="blog-content">
-      
-                  <div class="blog-meta">
-                    <p class="blog-category">Sustainability</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-06-18">June 18, 2025</time>
-                  </div>
-      
-                  <h3 class="h3 blog-item-title">E-Waste Management Project</h3>
-      
-                  <p class="blog-text">
-                    A deep dive into our smart bin, awareness-driven, and reward-based recycling system built for a cleaner future.
-                  </p>
-      
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm Varun M</h1>
+                <p class="subtitle">Computer Science Engineering Student (AI & ML)</p>
+                <p class="description">
+                    I am a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning. I enjoy building
+                    real-world software solutions using modern web technologies and AI. My interests include Full Stack Development, Artificial
+                    Intelligence, Cloud Computing, and solving practical problems through technology.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
                 </div>
-      
-              </a>
-            </li>
-      
-            <li class="blog-post-item">
-              <a href="#">
-      
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-portfolio.jpg" alt="My Web Portfolio Journey" loading="lazy">
-                </figure>
-      
-                <div class="blog-content">
-      
-                  <div class="blog-meta">
-                    <p class="blog-category">Web Dev</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-07-07">July 07, 2025</time>
-                  </div>
-      
-                  <h3 class="h3 blog-item-title">Building My Personal Portfolio</h3>
-      
-                  <p class="blog-text">
-                    How I designed and developed this personal portfolio website using HTML, CSS, JavaScript, and GitHub Pages.
-                  </p>
-      
-                </div>
-      
-              </a>
-            </li>
-      
-            <li class="blog-post-item">
-              <a href="#">
-      
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/logo-openai.png" alt="Chatbot integration" loading="lazy">
-                </figure>
-      
-                <div class="blog-content">
-      
-                  <div class="blog-meta">
-                    <p class="blog-category">AI Integration</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-06-21">June 21, 2025</time>
-                  </div>
-      
-                  <h3 class="h3 blog-item-title">Integrating AI Chatbot in Websites</h3>
-      
-                  <p class="blog-text">
-                    Learn how I added an AI chatbot to improve interactivity and support on my project showcase page.
-                  </p>
-      
-                </div>
-      
-              </a>
-            </li>
-      
-          </ul>
-      
-        </section>
-      
-      </article>
-      
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.7752773676325!2d78.41003338260563!3d16.887007542449343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bca4da00d9f57cb%3A0x89cd3a7c7e5819c0!2sBhavani%20Water%20filter!5e0!3m2!1sen!2sin!4v1751895186348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
+            <div class="hero-profile">
+                <div class="floating-card">
+                    <div class="glow"></div>
+                    <div class="profile-content">
+                        <h2>Varun M</h2>
+                        <p>AI/ML Enthusiast | Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+    <!-- About Section -->
+    <section id="about" class="about-section section">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-info">
+                    <div class="info-item">
+                        <h3>Name</h3>
+                        <p>Varun M</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>College</h3>
+                        <p>Vardhaman College of Engineering</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Department</h3>
+                        <p>Computer Science Engineering (AI & ML)</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Career Goal</h3>
+                        <p>
+                            Aspiring Software Engineer passionate about AI, Full Stack Development, Cloud Computing, and building impactful
+                            software solutions.
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Current Focus</h3>
+                        <p>
+                            Learning advanced web technologies while developing real-world AI-powered applications.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3>Skills Overview</h3>
+                    <div class="skills-overview">
+                        <!-- Skills will be populated in the dedicated section -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section">
+        <div class="section-content">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C Programming</span>
+                    </div>
+                </div>
+                <!-- Frontend -->
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Django REST Framework</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JWT Authentication</span>
+                    </div>
+                </div>
+                <!-- Database -->
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Render</span>
+                        <span class="skill-tag">Vercel</span>
+                    </div>
+                </div>
+                <!-- Cloud -->
+                <div class="skill-card">
+                    <h3>Cloud</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">IBM Cloud</span>
+                    </div>
+                </div>
+                <!-- AI -->
+                <div class="skill-card">
+                    <h3>AI</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">OpenAI APIs</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">AI Chatbot Integration</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Technologies -->
+            <div class="featured-tech">
+                <h3>Featured Technologies</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Git</span>
+                    <span class="tech-badge">AWS</span>
+                    <span class="tech-badge">OpenAI APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          </form>
+    <!-- Experience Timeline -->
+    <section id="experience" class="timeline-section section">
+        <div class="section-content">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Started Learning Programming</h3>
+                        <p class="timeline-date">2020</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Learned HTML, CSS & JavaScript</h3>
+                        <p class="timeline-date">2021</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Built Full Stack Applications</h3>
+                        <p class="timeline-date">2022</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Developed AI Powered Projects</h3>
+                        <p class="timeline-date">2023</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Selected for Infosys Springboard Internship 7.0</h3>
+                        <p class="timeline-date">2024</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Currently Building ExamGPT</h3>
+                        <p class="timeline-date">2025 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section section">
+        <div class="section-content">
+            <h2 class="section-title">Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>4+</h3>
+                    <p>Major Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>AI</h3>
+                    <p>Focused Developer</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Multiple</h3>
+                    <p>Certifications</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Continuous</h3>
+                    <p>Learner</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      </article>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section">
+        <div class="section-content">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- ExamGPT -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ExamGPT</h3>
+                        <span class="status-badge status-developing">🚧 Currently Developing</span>
+                    </div>
+                    <div class="project-icon">
+                        <!-- Icon placeholder -->
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            An AI-powered learning platform designed to provide personalized learning experiences through intelligent explanations,
+                            question practice, progress tracking, and analytics.
+                        </p>
+                        <div class="project-features">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>AI-powered explanations</li>
+                                <li>Question practice</li>
+                                <li>Topic-wise learning</li>
+                                <li>Progress tracking</li>
+                                <li>Analytics Dashboard</li>
+                                <li>JWT Authentication</li>
+                                <li>REST APIs</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Django REST Framework</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">JWT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SkillHer -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SkillHer</h3>
+                        <span class="status-badge status-completed">✅ Completed</span>
+                    </div>
+                    <div class="project-icon">
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Women Skill Development Platform.
+                        </p>
+                        <div class="project-features">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Authentication</li>
+                                <li>Course Management</li>
+                                <li>Dashboard</li>
+                                <li>Responsive UI</li>
+                                <li>Backend APIs</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- StudyStack -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>StudyStack</h3>
+                        <span class="status-badge status-completed">✅ Completed</span>
+                    </div>
+                    <div class="project-icon">
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            An all-in-one student productivity platform.
+                        </p>
+                        <div class="project-features">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Smart Study Planner</li>
+                                <li>Notes Sharing</li>
+                                <li>Upload Notes</li>
+                                <li>Download Notes</li>
+                                <li>Student Collaboration</li>
+                                <li>Authentication</li>
+                                <li>Planner</li>
+                                <li>Dashboard</li>
+                                <li>Progress Tracking</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E-Waste Collection & Recycling System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>E-Waste Collection & Recycling System</h3>
+                        <span class="status-badge status-completed">✅ Completed</span>
+                    </div>
+                    <div class="project-icon">
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            A system for efficient e-waste collection and recycling.
+                        </p>
+                        <div class="project-features">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Pickup Requests</li>
+                                <li>Smart Bin Integration</li>
+                                <li>Reward System</li>
+                                <li>AI Chatbot</li>
+                                <li>Email Notifications</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Internship -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Infosys Springboard Internship 7.0</h3>
+                        <span class="status-badge status-internship">🎓 Internship</span>
+                    </div>
+                    <div class="project-icon">
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Selected after successfully completing prerequisite courses and assessments.
+                        </p>
+                        <div class="project-features">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Responsive Design</li>
+                                <li>API Integration</li>
+                                <li>Component-Based UI</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Frontend Development Internship -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Cognifyz Technologies</h3>
+                        <span class="status-badge status-internship">💼 Internship</span>
+                    </div>
+                    <div class="project-icon">
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Frontend Development Internship.
+                        </p>
+                        <div class="project-features">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Responsive Design</li>
+                                <li>API Integration</li>
+                                <li>Component-Based UI</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section section">
+        <div class="section-content">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h3>IBM CognitiveClass Cloud Course</h3>
+                    <p class="cert-date">Completed: 2023</p>
+                </div>
+                <div class="cert-card">
+                    <h3>ServiceNow Learning (In Progress)</h3>
+                    <p class="cert-date">In Progress</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Infosys Springboard Learning</h3>
+                    <p class="cert-date">Completed: 2024</p>
+                </div>
+                <div class="cert-card">
+                    <h3>Various AI & Cloud Courses</h3>
+                    <p class="cert-date">Ongoing</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </main>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+        <div class="section-content">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Submit Message</button>
+                </form>
+                <div id="formResponse" class="form-response"></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                Passionate about building intelligent software that creates meaningful real-world impact.
+            </p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varun M</p>
+                <p>Designed & Developed with ❤️ using HTML & CSS</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Google Apps Script URL - replace with your actual URL
+        const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
+            const formData = new FormData(this);
+            const data = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
 
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                // Success
+                showResponse('Message sent successfully! I\'ll get back to you soon.', 'success');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            })
+            .catch(error => {
+                // Error
+                showResponse('Failed to send message. Please try again later.', 'error');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        function showResponse(message, type) {
+            const responseDiv = document.getElementById('formResponse');
+            responseDiv.textContent = message;
+            responseDiv.className = `form-response ${type}`;
+            responseDiv.style.display = 'block';
+
+            // Hide after 5 seconds
+            setTimeout(() => {
+                responseDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
 
 </body>
-
 </html>
