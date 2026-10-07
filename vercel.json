@@ -8,22 +8,6 @@
   ],
   "routes": [
     {
-      "src": "/googleb5949ab1058f2676.html",
-      "dest": "/googleb5949ab1058f2676.html"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "server.js"
     }
