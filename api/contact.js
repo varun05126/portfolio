@@ -1,25 +1,5 @@
-const express = require('express');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
-const path = require('path');
-require('dotenv').config();
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Serve static portfolio files
-app.use(express.static(path.join(__dirname)));
-
-/**
- * Creates and returns a Nodemailer transporter.
- * If EMAIL_USER and EMAIL_PASS are set, uses configured SMTP / Gmail.
- * Otherwise, generates an Ethereal test account so development and testing works immediately.
- */
 async function getTransporter() {
     const hasCustomConfig = Boolean(process.env.EMAIL_USER && process.env.EMAIL_PASS);
 
@@ -40,7 +20,6 @@ async function getTransporter() {
             };
         }
 
-        // Default to Gmail service
         return {
             transporter: nodemailer.createTransport({
                 service: process.env.EMAIL_SERVICE || 'gmail',
@@ -54,8 +33,8 @@ async function getTransporter() {
         };
     }
 
-    // Fallback: Automatic Ethereal test account for instant testing without manual SMTP credentials
-    console.log('⚡ No production EMAIL_USER found in .env. Initializing Nodemailer Ethereal test account...');
+    // Fallback: Automatic Ethereal email test account for instant testing
+    console.log('⚡ Initializing Nodemailer Ethereal test account on Vercel...');
     const testAccount = await nodemailer.createTestAccount();
     return {
         transporter: nodemailer.createTransport({
@@ -72,21 +51,22 @@ async function getTransporter() {
     };
 }
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-    res.json({
-        status: 'ok',
-        service: 'Portfolio Nodemailer Server',
-        timestamp: new Date().toISOString()
-    });
-});
+module.exports = async function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-// Contact form submission endpoint
-app.post('/api/contact', async (req, res) => {
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
+    if (req.method !== 'POST') {
+        return res.status(405).json({ success: false, message: 'Method Not Allowed' });
+    }
+
     try {
-        const { fullName, email, subject, message } = req.body;
+        const { fullName, email, subject, message } = req.body || {};
 
-        // Validation
         if (!fullName || !email || !subject || !message) {
             return res.status(400).json({
                 success: false,
@@ -102,17 +82,14 @@ app.post('/api/contact', async (req, res) => {
             });
         }
 
-        // Clean & truncate inputs
         const safeName = String(fullName).trim().slice(0, 100);
         const safeEmail = String(email).trim().slice(0, 150);
         const safeSubject = String(subject).trim().slice(0, 200);
         const safeMessage = String(message).trim().slice(0, 5000);
 
         const recipientEmail = process.env.RECIPIENT_EMAIL || 'malthumkarvarun@gmail.com';
-
         const { transporter, isTest, fromEmail } = await getTransporter();
 
-        // Email to portfolio owner
         const mailOptions = {
             from: `"${safeName} (Portfolio Contact)" <${fromEmail}>`,
             replyTo: safeEmail,
@@ -170,12 +147,9 @@ app.post('/api/contact', async (req, res) => {
         };
 
         const info = await transporter.sendMail(mailOptions);
-        console.log(`✅ Message sent successfully! ID: ${info.messageId}`);
-
         let previewUrl = null;
         if (isTest) {
             previewUrl = nodemailer.getTestMessageUrl(info);
-            console.log(`🔗 Ethereal Email Preview URL: ${previewUrl}`);
         }
 
         return res.status(200).json({
@@ -185,26 +159,10 @@ app.post('/api/contact', async (req, res) => {
             previewUrl: previewUrl || undefined
         });
     } catch (error) {
-        console.error('❌ Error sending email via Nodemailer:', error);
+        console.error('❌ Error sending email via Nodemailer on Vercel:', error);
         return res.status(500).json({
             success: false,
-            message: 'An error occurred while sending your message. Please try again later.',
-            error: process.env.NODE_ENV === 'development' ? error.message : undefined
+            message: 'An error occurred while sending your message. Please try again later.'
         });
     }
-});
-
-// Fallback to index.html for root or unknown GET routes
-app.use((req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Start server when run directly
-if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`🚀 Portfolio server running on http://localhost:${PORT}`);
-        console.log(`📧 Nodemailer ready on endpoint: POST http://localhost:${PORT}/api/contact`);
-    });
-}
-
-module.exports = app;
+};
