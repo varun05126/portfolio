@@ -72,6 +72,19 @@ async function getTransporter() {
     };
 }
 
+// Verification & SEO static endpoints
+app.get('/googleb5949ab1058f2676.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'googleb5949ab1058f2676.html'));
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain').sendFile(path.join(__dirname, 'robots.txt'));
+});
+
+app.get('/sitemap.xml', (req, res) => {
+    res.type('application/xml').sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
     res.json({
