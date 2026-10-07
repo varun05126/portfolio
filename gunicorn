@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo "🚀 Starting Node.js portfolio server (via gunicorn shim)..."
+exec node server.js
